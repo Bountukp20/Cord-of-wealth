@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css_files %}
+    <script src="https://kit.fontawesome.com/0a96adf822.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+{% endblock %}
+{% block title %}
+    Home|Stores
+{% endblock %}
+{% block content %}
+<style>
+    body{
+        color: darkgray;
+        background-size: cover;
+        overflow-x: hidden;
+    }
+    .catalogue-img{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-column-gap: 1em;
+        grid-row-gap: 1.5em;
+        padding: 1em 0;
+    }
+    .one, .two, .three, .four, .five, .six, .seven{
+        background: grey;
+        box-shadow: 0 0 0.75rem black;
+        width: 20em;
+        height: 15em;
+        object-fit: contain;
+    }
+    .catalogue-img img{
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+    }
+    .footer{
+        top: 5em;
+        margin-left: 20em;
+    }
+    .footer a{
+        margin: 4em;
+        border: 1px solid grey;
+        border-radius: 2px;
+        color: white;
+        box-shadow: 2px 5px black;
+        font-size: 2em;
+        background: violet;
+    }
+</style>
+{% if user.is_authenticated %}
+<div class="overall">
+    <div class="catalogue-img">
+        <div class="one">
+            <img src="{% static "first_part/images/native-4.jpg" %}" alt="native">
+        </div>
+        <div class="two">
+            <img src="{% static "first_part/images/native-7.jpg" %}" alt="native">
+        </div>
+        <div class="three">
+            <img src="{% static "first_part/images/native-11.jpg" %}" alt="native">
+        </div>
+        <div class="four">
+            <img src="{% static "first_part/images/native-10.jpg" %}" alt="native">
+        </div>
+        <div class="five">
+            <img src="{% static "first_part/images/native-5.jpg" %}" alt="native">
+        </div>
+        <div class="six">
+            <img src="{% static "first_part/images/native-8.jpg" %}" alt="native">
+        </div>
+        <div class="seven">
+            <img src="{% static "first_part/images/native-6.jpg" %}" alt="native">
+        </div>
+    </div>
+    <div class="footer"><a href="#"><i class="fa-solid fa-envelope"></i></a><a href="#" ><i class="fa fa-book"></i></a><a href="tel:+2349158669304"><i class="fa fa-phone" aria-hidden="true"></i></a></div>
+</div>
+{% endif %}
+{% endblock %}

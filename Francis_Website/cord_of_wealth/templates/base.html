@@ -1,0 +1,17 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta name="viewport" content=" width=device-width, user-scalable=no">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keyword" content="cloth">
+        <meta name="description" content="Cloth">
+        <meta name="author" content="Francis">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="icon" href="{% static "first_part\images\6126e82d-c8e3-42ee-bb41-a7d7e6f7fac2.jpg" type="image/png" sizes="5x5" %}">
+        {% block css_files %}{% endblock %}
+    </head>
+    <body>
+        {% block content %}{% endblock %}
+    </body>

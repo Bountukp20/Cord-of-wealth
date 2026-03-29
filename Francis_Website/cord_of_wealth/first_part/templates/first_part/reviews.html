@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% comment %} {% load socialaccount %} {% endcomment %}
+
+{% block css_files %}
+    <script src="https://kit.fontawesome.com/0a96adf822.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+{% endblock %}
+
+{% block title %}
+    MarvCode Blog|Articles|{{ HTML.title }}
+{% endblock %}
+
+{% block content %}
+<section class="html-body">
+    <div class="reviews-container">
+        <div class="reviews">
+            <h3 class="username">{{ review.name }}</h3>
+            <p class="body">{{ review.body }}</p>
+        </div>
+    </div>
+</section>
+<section class="post_field">
+    <div class="column">
+        <label for="post">Message:</label>
+    </div>
+    <div class="column_2">
+        <input id="text" type="text" name="post" placeholder="Your message..."spellcheck="a-z" required>
+    </div>
+    <div class="submit">
+        <input type="submit" value="Post">
+    </div>
+
+{% endblock %}
